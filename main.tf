@@ -6,7 +6,7 @@ locals {
 }
 
 resource "null_resource" "gcr_docker_image" {
-  triggers {
+  triggers = {
     build_number = "${timestamp()}"
   }
   
