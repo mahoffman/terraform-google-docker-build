@@ -3,6 +3,12 @@ variable "gcp_project" {
     type        = string
 }
 
+variable "gcp_region" {
+    description = "GCP Region to run the build in."
+    type        = string
+    default = "us-central1"
+}
+
 variable "gcp_token" {
     description = "GCP Authentication token."
     type        = string
@@ -34,4 +40,10 @@ variable "build_platform" {
     description = "Architecture to build the image for. Defaults to 'linux/amd64'."
     type = string
     default = "linux/amd64"
+}
+
+variable "cloud_build" {
+    description = "If true, run the image build on Cloud Build, otherwise run locally."
+    type = bool
+    default = true
 }

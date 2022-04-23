@@ -1,7 +1,7 @@
 locals {
     build_command = <<EOF
         ${path.module}/scripts/gcr-docker-build.sh \
-        ${var.gcp_token} ${var.name}:${var.tag} ${var.gcp_project} ${var.context} ${var.build_platform}
+        ${var.gcp_token} ${var.name}:${var.tag} ${var.gcp_project} ${var.context} ${var.build_platform} ${var.cloud_build} ${var.gcp_region}
     EOF
 }
 
