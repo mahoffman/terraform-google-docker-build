@@ -13,5 +13,5 @@ then
     docker build --platform ${PLATFORM} -t gcr.io/${GCP_PROJECT}/${TAG} ${CONTEXT}
     docker push gcr.io/${GCP_PROJECT}/${TAG}
 else
-    gcloud builds submit --project ${GCP_PROJECT} --region ${GCP_REGION} --tag gcr.io/${GCP_PROJECT}/${TAG} ${CONTEXT} --timeout "1200"
+    gcloud builds submit --project ${GCP_PROJECT} --region ${GCP_REGION} --tag gcr.io/${GCP_PROJECT}/${TAG} ${CONTEXT} --timeout "1800"
 fi
